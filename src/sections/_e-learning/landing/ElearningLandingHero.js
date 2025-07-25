@@ -30,7 +30,7 @@ import lgo from '../../../_mock/assets/logo/linkedin.png';
 const SUMMARY = [
   // { value: 3, label: 'Years of Experience', color: 'warning' },
   { value: 8, label: 'Personal Projects', color: 'error' },
-  { value: 80, label: 'Cups of coffee', color: 'success' },
+  { value: 100, label: 'Cups of coffee', color: 'success' },
 ];
 
 // ----------------------------------------------------------------------
@@ -92,7 +92,7 @@ export default function ElearningLandingHero() {
                       marginTop: '30px',
                     }}
                   >
-                    {` Aspiring Product Designer `}
+                    {` Frontend Web Developer `}
                   </Box>
                 </Typography>
 

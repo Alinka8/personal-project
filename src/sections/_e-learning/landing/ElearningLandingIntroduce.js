@@ -5,6 +5,7 @@ import useResponsive from 'src/hooks/useResponsive';
 // components
 import Image from 'src/components/images';
 import MySecPhoto from '../../../components/images/portrait3.png';
+import ImpactCollage from '../../../components/images/impact-collage.png'; // Adjust path as needed
 
 // ----------------------------------------------------------------------
 
@@ -12,84 +13,101 @@ export default function ElearningLandingIntroduce() {
   const isMdUp = useResponsive('up', 'md');
 
   return (
-    <Container
-      sx={{
-        py: { xs: 8, md: 15 },
-      }}
-    >
-      <Typography
-        variant="overline"
+    <>
+      <Container
         sx={{
-          display: 'block',
-          color: 'primary.main',
-          mb: { xs: 2, md: 10 },
+          py: { xs: 8, md: 15 },
         }}
       >
-        A Couple of words about myself
-      </Typography>
+        <Typography
+          variant="overline"
+          sx={{
+            display: 'block',
+            color: 'primary.main',
+            mb: { xs: 2, md: 10 },
+          }}
+        >
+          A Couple of words about myself
+        </Typography>
 
-      <Grid
-        container
-        spacing={3}
-        alignItems={{ md: 'center' }}
-        justifyContent={{ md: 'space-between' }}
-      >
-        {isMdUp && (
-          <Grid xs={12} md={6} lg={5}>
-            <Image alt="about" src={MySecPhoto} ratio="4/6" sx={{ borderRadius: 2 }} />
+        <Grid
+          container
+          spacing={3}
+          alignItems={{ md: 'center' }}
+          justifyContent={{ md: 'space-between' }}
+        >
+          {isMdUp && (
+            <Grid xs={12} md={6} lg={5}>
+              <Image alt="about" src={MySecPhoto} ratio="4/6" sx={{ borderRadius: 2 }} />
+            </Grid>
+          )}
+
+          <Grid xs={12} md={6} lg={6}>
+            <Typography variant="h3" sx={{ mb: 3 }}>
+              Frontend Web Developer
+            </Typography>
+
+            <Typography sx={{ color: 'text.secondary' }}>
+              I&apos;m a Frontend Web Developer with nearly 4 years of experience creating
+              responsive, accessible, and user-focused web applications. I started my journey in QA
+              testing, which taught me the value of clean code, usability, and performance. That
+              foundation now drives how I approach frontend development.
+            </Typography>
+
+            <Stack
+              direction={{ xs: 'column', md: 'column' }}
+              spacing={{ xs: 5, md: 10 }}
+              sx={{ mt: { xs: 8, md: 10 } }}
+            >
+              <Stack spacing={3}>
+                <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
+                <Typography sx={{ color: 'text.secondary' }}>
+                  I specialize in React.js, JavaScript, HTML5, and CSS3, and have experience with
+                  tools like Tailwind CSS, Bootstrap, GitHub, and Vercel. I&apos;ve also worked with
+                  headless CMS platforms, third-party API integrations, and cross-browser QA testing
+                  to deliver polished, high-performance websites.{' '}
+                </Typography>
+              </Stack>
+
+              <Stack spacing={3}>
+                <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
+                <Typography sx={{ color: 'text.secondary' }}>
+                  With a strong eye for detail and a passion for intuitive design, I enjoy building
+                  web experiences that are not only functional, but delightful to use.
+                </Typography>
+              </Stack>
+            </Stack>
           </Grid>
-        )}
-
-        <Grid xs={12} md={6} lg={6}>
-          <Typography variant="h3" sx={{ mb: 3 }}>
-            Aspiring Product Designer
-          </Typography>
-
-          <Typography sx={{ color: 'text.secondary' }}>
-            I began my career as a QA tester, ensuring the quality and usability of digital
-            products. Along the way, I became increasingly curious about how experiences are
-            designed — not just how they function. That curiosity led me to product design, where
-            I’m now focused on learning how to craft intuitive, meaningful user experiences that go
-            beyond functionality.
-          </Typography>
-
-          <Stack
-            direction={{ xs: 'column', md: 'column' }}
-            spacing={{ xs: 5, md: 10 }}
-            sx={{ mt: { xs: 8, md: 10 } }}
-          >
-            <Stack spacing={3}>
-              <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
-              <Typography sx={{ color: 'text.secondary' }}>
-                Proficient in building responsive interfaces using React.js, JavaScript, HTML5, and
-                CSS3 — with attention to both structure and user experience.{' '}
-              </Typography>
-            </Stack>
-
-            <Stack spacing={3}>
-              <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
-              <Typography sx={{ color: 'text.secondary' }}>
-                Experienced in cross-browser QA testing, applying usability principles to identify
-                layout and accessibility issues early in the development process.{' '}
-              </Typography>
-            </Stack>
-            <Stack spacing={3}>
-              <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
-              <Typography sx={{ color: 'text.secondary' }}>
-                Familiar with modern UI frameworks like Tailwind CSS and Bootstrap, and passionate
-                about clean, intuitive design.
-              </Typography>
-            </Stack>
-            <Stack spacing={3}>
-              <Box sx={{ width: 24, height: 3, bgcolor: 'primary.main' }} />
-              <Typography sx={{ color: 'text.secondary' }}>
-                Currently transitioning into product design, bringing a unique perspective from QA
-                and frontend development to craft thoughtful, user-centered interfaces.
-              </Typography>
-            </Stack>
-          </Stack>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+
+      <Container
+        sx={{
+          py: { xs: 8, md: 15 },
+          textAlign: 'center',
+        }}
+      >
+        <Typography
+          variant="overline"
+          sx={{
+            display: 'block',
+            color: 'primary.main',
+            mb: { xs: 2, md: 10 },
+          }}
+        >
+          Impact & Community Involvement
+        </Typography>
+        <Image
+          alt="Impact Collage"
+          src={ImpactCollage}
+          sx={{
+            borderRadius: 2,
+            maxWidth: '100%',
+            boxShadow: 3,
+            margin: '0 auto',
+          }}
+        />
+      </Container>
+    </>
   );
 }

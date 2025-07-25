@@ -26,10 +26,29 @@ import img6 from '../../../_mock/assets/course/easy_shop.jpg';
 import img3 from '../../../_mock/assets/course/course_3.jpg';
 import img4 from '../../../_mock/assets/course/course_4.jpg';
 import img5 from '../../../_mock/assets/course/movie.jpg';
+import img7 from '../../../_mock/assets/course/agroai.jpg';
+import img8 from '../../../_mock/assets/course/kids.jpg';
 
 // ----------------------------------------------------------------------
 
 const myProjects = [
+  {
+    title: 'AgroAI',
+    url: 'https://www.agroai.info/',
+    img: img7,
+    alt: 'agro-lbm',
+    description: `
+     Contributing to the development of an AI-based system that analyzes Sentinel-2 satellite imagery to predict future crop types in
+  Central Asia for agricultural research. The project supports food security efforts by helping farmers and researchers make data-driven decisions. `,
+  },
+  {
+    title: 'Kids Summer Robotics',
+    url: 'https://robotics-web.vercel.app/',
+    img: img8,
+    alt: 'kids-lbm',
+    description: `
+     This summer robotics project gives kids a fun and engaging way to explore science, technology, engineering, and math through real-world applications. They'll build, experiment, and code their own robots while developing problem-solving skills and creative thinking along the way. `,
+  },
   {
     title: 'Wiser LBM',
     img: img2,
